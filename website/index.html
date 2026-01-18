@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+
+<head>
+<title>Properly made dictionary (Turkish - English)</title>
+    <!-- AG-GRID -->
+    <link rel="stylesheet" href="common/additional.css"/>
+    <script type="text/javascript" src="common/ag-grid-community.min.js"></script>
+    <script type="text/javascript" src="common/tabs.js"></script>
+</head>
+<body class="body">
+
+
+<h2>Properly made dictionary (Turkish - English)
+    <a href="https://github.com/smirnovkirilll/properly_made_dictionary"> (what is it?)</a>
+</h2>
+
+
+<!--DYNAMIC PART BEGIN-->
+<div class="tab">
+    <button class="tablinks" onclick="openList(event, 'turkish-english-tab')" id="defaultOpen">TR - EN</button>
+    <button class="tablinks" onclick="openList(event, 'english-turkish-tab')">EN - TR</button>
+</div>
+
+
+<div id="turkish-english-tab" class="tabcontent">
+<div>
+    <input type="text" id="turkish-english-filter" class="ag-grid-quick-filter" placeholder="Filter..." oninput="onFilterTextBoxChangedTE()" />
+    <span class="turkish-letter-unicode">ctrl+shift+u+{symbol-code}+enter | symbol-codes: &#287 - 011F / &#252 - 00FC / &#351 - 015F / &#305 - 0131 / &#246 - 00F6 / &#231 - 00E7</span>
+</div>
+<div id="TurkishEnglishGrid" class="ag-grid"></div>
+<script type="text/javascript" src="pages/turkish_english.js"></script>
+</div>
+
+
+<div id="english-turkish-tab" class="tabcontent">
+<div>
+    <input type="text" id="english-turkish-filter" class="ag-grid-quick-filter" placeholder="Filter..." oninput="onFilterTextBoxChangedET()" />
+    <span class="turkish-letter-unicode">ctrl+shift+u+{symbol-code}+enter | symbol-codes: &#287 - 011F / &#252 - 00FC / &#351 - 015F / &#305 - 0131 / &#246 - 00F6 / &#231 - 00E7</span>
+</div>
+<div id="EnglishTurkishGrid" class="ag-grid"></div>
+<script type="text/javascript" src="pages/english_turkish.js"></script>
+</div>
+<!--DYNAMIC PART END-->
+
+
+<script type="text/javascript">
+    document.getElementById("defaultOpen").click();
+</script>
+
+
+<div class="footer">
+    <a href="https://github.com/smirnovkirilll/properly_made_dictionary">
+    <img src="common/github.png" alt="github" class="footer-img">
+    </a>
+</div>
+
+
+</body>
+</html>
